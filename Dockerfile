@@ -21,7 +21,7 @@ RUN curl -sL https://deb.nodesource.com/setup_12.x | bash - \
     && apt-get install -y nodejs
 
 WORKDIR /app
-ADD server.js package.json ./
+ADD server.js package.json handler.js processor.js interact.js ./
 
 RUN npm install express crypto protobufjs sawtooth-sdk secp256k1 text-encoding uuid zeromq node-fetch@2.6.1
 RUN npm install
